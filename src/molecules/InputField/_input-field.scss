@@ -1,0 +1,41 @@
+.field-container{
+    padding: 8px 16px;
+    border: 0.8px solid #e6ebf5; 
+    width: 251.8px;
+    height: 43px;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.error{
+     padding: 8px 37px 8px 16px;
+}
+
+.left-icon-holder{
+    width: 47.6px;
+    height: 43px;
+    background-color:#f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field{
+    width: 100%;
+    border: 0px;
+    height: 100%;
+    font-family: "Public Sans", sans-serif;
+    font-size: 14px;
+    color: #495057;
+    line-height: 21px;
+    padding: 0;
+}
+
+.left-icon-field-container{
+    display: flex;
+    border-radius: 4px;
+}
+
+.input-field{
+    margin-bottom: 16px;
+}
