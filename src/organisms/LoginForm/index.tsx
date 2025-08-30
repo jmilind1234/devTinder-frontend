@@ -2,6 +2,7 @@ import { LockKeyhole, User } from "lucide-react";
 import BoxContainer from "../../atoms/BoxContainer";
 import InputField from "../../molecules/InputField";
 import Button from "../../atoms/Button";
+import "./_login-form.scss";
 
 function LoginForm() {
   return (
@@ -16,6 +17,7 @@ function LoginForm() {
         placeholder={"Enter email id"}
       />
       <InputField
+        classes="mb-24"
         type="password"
         labelText="Password"
         errorText="Please Enter Your Password"

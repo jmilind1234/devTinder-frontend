@@ -1,7 +1,7 @@
 import type { LucideProps } from "lucide-react";
-import type { ReactNode } from "react";
 
 export interface inputField{
+    classes?: string;
     type: 'text' | 'password' | 'email';
     leftIcon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
     value: string;

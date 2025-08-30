@@ -5,6 +5,7 @@ import "./_input-field.scss";
 import ForgotPassword from "../../atoms/ForgotPassword";
 
 const InputField = ({
+  classes,
   type,
   leftIcon,
   value,
@@ -15,7 +16,7 @@ const InputField = ({
   forgotPassword
 }: inputField) => {
   return (
-    <div className="input-field">
+    <div className={`input-field ${classes ? classes : ""}`}>
         <div className="label-forgotpassword-container">
             <Label>{labelText}</Label>
             {forgotPassword && <ForgotPassword text={"Forgot password?"}/>}
