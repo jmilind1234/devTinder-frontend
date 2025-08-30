@@ -23,6 +23,7 @@ function LoginForm() {
         leftIcon={<LockKeyhole size={14} />}
         error={true}
         placeholder={"Enter password"}
+        forgotPassword={true}
       />
       <Button btnText="Sign in" />
     </BoxContainer>
