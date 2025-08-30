@@ -3,6 +3,8 @@ import BoxContainer from "../../atoms/BoxContainer";
 import InputField from "../../molecules/InputField";
 import Button from "../../atoms/Button";
 import "./_login-form.scss";
+import CheckBox from "../../atoms/CheckBox";
+import Label from "../../atoms/Label";
 
 function LoginForm() {
   return (
@@ -27,6 +29,9 @@ function LoginForm() {
         placeholder={"Enter password"}
         forgotPassword={true}
       />
+      <div className="remember-me-container mb-24">
+        <CheckBox /> <Label>Remember me</Label>
+      </div>
       <Button btnText="Sign in" />
     </BoxContainer>
   );
