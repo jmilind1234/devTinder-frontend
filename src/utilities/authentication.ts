@@ -1,17 +1,8 @@
 export const handleLogin = async (identifier: string, password: string) => {
-  const isTenDigitNumber = /^\d{10}$/.test(identifier);
-  let payload;
-  if (isTenDigitNumber) {
-    payload = {
-      phone: identifier,
-      password: password,
-    };
-  } else {
-    payload = {
-      username: identifier,
-      password: password,
-    };
-  }
+  const payload = /^\d{10}$/.test(identifier)
+    ? { phone: identifier, password }
+    : { username: identifier, password };
+
   const response = await fetch("http://localhost:7777/auth/login", {
     method: "POST",
     body: JSON.stringify(payload),
