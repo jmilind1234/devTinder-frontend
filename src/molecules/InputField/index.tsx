@@ -25,9 +25,9 @@ const InputField = ({
             {forgotPassword && <ForgotPassword text={"Forgot password?"}/>}
         </div>
       <>
-        <div className="left-icon-field-container">
-          {leftIcon && <span className="left-icon-holder">{leftIcon}</span>}
-          <div className={`field-container ${error ? "error" : ""}`}>
+        <div className={`left-icon-field-container ${error ? "__error" : ""}`}>
+          {leftIcon && <span className={`left-icon-holder ${error ? "__error" : ""}`}>{leftIcon}</span>}
+          <div className={`field-container`}>
             <input
               className="field"
               type={type}
