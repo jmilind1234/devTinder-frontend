@@ -2,6 +2,12 @@
     padding: 40px; 
     border-radius: 4px;
     background-color: #ffffff;
-    width: 378.4px;
+    width: calc(100% - 24px);
     height: 408.98px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+
+    @media (min-width: 1024px) {
+        width: 456px;
+    }
 }

@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginForm from "./organisms/LoginForm";
+import LoginPage from "./pages/Login";
 
 function App() {
   return (
     <>
-    <LoginForm/>
+    <LoginPage/>
       {/* <BrowserRouter basename="/">
         <Routes>
           <Route path="/login" element={}/>
