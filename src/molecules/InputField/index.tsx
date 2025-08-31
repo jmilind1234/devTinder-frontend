@@ -13,7 +13,10 @@ const InputField = ({
   labelText,
   placeholder,
   error,
-  forgotPassword
+  forgotPassword,
+  changeHandler,
+  blurHandler,
+  focusHandler
 }: inputField) => {
   return (
     <div className={`input-field ${classes ? classes : ""}`}>
@@ -30,6 +33,9 @@ const InputField = ({
               type={type}
               value={value}
               placeholder={placeholder}
+              onChange={changeHandler}
+              onBlur={blurHandler}
+              onFocus={focusHandler}
             />
           </div>
         </div>

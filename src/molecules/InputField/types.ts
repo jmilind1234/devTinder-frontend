@@ -10,5 +10,8 @@ export interface inputField{
     placeholder: string;
     rightIcon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
     error: boolean;
-    forgotPassword?: boolean
+    forgotPassword?: boolean;
+    changeHandler?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    blurHandler?: (e: React.FocusEvent<HTMLInputElement>) => void;
+    focusHandler?: () => void;
 }
