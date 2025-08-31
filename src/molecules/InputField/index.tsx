@@ -12,7 +12,8 @@ const InputField = ({
   labelText,
   placeholder,
   error,
-  forgotPassword
+  forgotPassword,
+  handleChange
 }: inputField) => {
   return (
     <div className="input-field">
@@ -27,7 +28,7 @@ const InputField = ({
             <input
               className="field"
               type={type}
-              value={value}
+              defaultValue={value}
               placeholder={placeholder}
             />
           </div>

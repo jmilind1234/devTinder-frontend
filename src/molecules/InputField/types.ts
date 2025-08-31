@@ -5,6 +5,7 @@ export interface inputField{
     type: 'text' | 'password' | 'email';
     leftIcon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
     value: string;
+    handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     errorText: string;
     labelText: string;
     placeholder: string;
