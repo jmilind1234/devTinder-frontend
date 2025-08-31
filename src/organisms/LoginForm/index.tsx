@@ -6,6 +6,7 @@ import "./_login-form.scss";
 import CheckBox from "../../atoms/CheckBox";
 import Label from "../../atoms/Label";
 import React from "react";
+import { handleLogin } from "../../utilities/authentication";
 
 function LoginForm() {
   const [identifier, setIdentifier] = React.useState("");
@@ -17,20 +18,6 @@ function LoginForm() {
   const [identifierErrorText, setIdentifierErrorText] = React.useState("");
   const [passwordErrorText, setPasswordErrorText] = React.useState("");
 
-  async function handleLogin(identifier: string, password: string) {
-    //firstly find out whether the identifier is phone number or username
-    //than as per that prepare the payload and send the request to the server
-    const isTenDigitNumber = /^\d{10}$/.test(identifier);
-    if(isTenDigitNumber){
-      //means payload will consist of phone number and password
-      const payload = {
-        phone: identifier,
-        password: password
-      }
-    }else{
-      
-    }
-  }
   return (
     <BoxContainer>
       <InputField
@@ -82,9 +69,7 @@ function LoginForm() {
       <div className="remember-me-container mb-24">
         <CheckBox /> <Label>Remember me</Label>
       </div>
-      <Button btnText="Sign in" clickHandler={() => {
-        
-      }} />
+      <Button btnText="Sign in" clickHandler={() => handleLogin(identifier, password)} />
     </BoxContainer>
   );
 }

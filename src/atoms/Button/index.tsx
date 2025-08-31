@@ -1,12 +1,18 @@
-import React from 'react'
-import './_button.scss';
-function Button({btnText}:{btnText:string}) {
+import "./_button.scss";
+import React from "react";
+
+function Button({
+  btnText,
+  clickHandler,
+}: {
+  btnText: string;
+  clickHandler: React.MouseEventHandler<HTMLButtonElement>;
+}) {
   return (
-    <button className='button'>
-        {btnText}
+    <button className="button" onClick={clickHandler}>
+      {btnText}
     </button>
-  )
+  );
 }
 
 export default Button;
-
