@@ -5,6 +5,7 @@ import "./_input-field.scss";
 import ForgotPassword from "../../atoms/ForgotPassword";
 
 const InputField = ({
+  classes,
   type,
   leftIcon,
   value,
@@ -12,23 +13,29 @@ const InputField = ({
   labelText,
   placeholder,
   error,
-  forgotPassword
+  forgotPassword,
+  changeHandler,
+  blurHandler,
+  focusHandler
 }: inputField) => {
   return (
-    <div className="input-field">
+    <div className={`input-field ${classes ? classes : ""}`}>
         <div className="label-forgotpassword-container">
             <Label>{labelText}</Label>
             {forgotPassword && <ForgotPassword text={"Forgot password?"}/>}
         </div>
       <>
-        <div className="left-icon-field-container">
-          {leftIcon && <span className="left-icon-holder">{leftIcon}</span>}
-          <div className={`field-container ${error ? "error" : ""}`}>
+        <div className={`left-icon-field-container ${error ? "__error" : ""}`}>
+          {leftIcon && <span className={`left-icon-holder ${error ? "__error" : ""}`}>{leftIcon}</span>}
+          <div className={`field-container`}>
             <input
               className="field"
               type={type}
               value={value}
               placeholder={placeholder}
+              onChange={changeHandler}
+              onBlur={blurHandler}
+              onFocus={focusHandler}
             />
           </div>
         </div>

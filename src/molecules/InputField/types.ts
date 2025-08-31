@@ -1,7 +1,7 @@
 import type { LucideProps } from "lucide-react";
-import type { ReactNode } from "react";
 
 export interface inputField{
+    classes?: string;
     type: 'text' | 'password' | 'email';
     leftIcon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
     value: string;
@@ -10,5 +10,8 @@ export interface inputField{
     placeholder: string;
     rightIcon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
     error: boolean;
-    forgotPassword?: boolean
+    forgotPassword?: boolean;
+    changeHandler?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    blurHandler?: (e: React.FocusEvent<HTMLInputElement>) => void;
+    focusHandler?: () => void;
 }
