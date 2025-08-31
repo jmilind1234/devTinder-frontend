@@ -2,7 +2,6 @@ import Heading4 from "../../atoms/Heading4";
 import TextLink from "../../atoms/Link";
 import LoginForm from "../../organisms/LoginForm";
 import "./_login.scss";
-import './../../atoms/Link/_link.scss';
 
 function LoginPage() {
   return (
@@ -12,7 +11,7 @@ function LoginPage() {
         <LoginForm/>
         <div className="sign-up-text-container">
           <p className="sign-up-text">Don't have an acount ?</p>
-          <a href="#" className="text-link"> Signup now</a>
+          <TextLink to="/signup" text="Signup now"/>
         </div>
     </div>
   )

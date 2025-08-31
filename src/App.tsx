@@ -3,14 +3,11 @@ import LoginPage from "./pages/Login";
 
 function App() {
   return (
-    <>
-    <LoginPage/>
-      {/* <BrowserRouter basename="/">
+    <BrowserRouter basename="/">
         <Routes>
-          <Route path="/login" element={}/>
+          <Route path="/" element={<LoginPage />}/>
          </Routes>
-      </BrowserRouter> */}
-    </>
+      </BrowserRouter>
   )
 }
 
