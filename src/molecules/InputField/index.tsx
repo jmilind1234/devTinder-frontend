@@ -24,9 +24,8 @@ const InputField = ({
             <Label>{labelText}</Label>
             {forgotPassword && <ForgotPassword text={"Forgot password?"}/>}
         </div>
-      <>
         <div className={`left-icon-field-container ${error ? "__error" : ""}`}>
-          {leftIcon && <span className={`left-icon-holder ${error ? "__error" : ""}`}>{leftIcon}</span>}
+          {leftIcon && <span className={`left-icon-holder`}>{leftIcon}</span>}
           <div className={`field-container`}>
             <input
               className="field"
@@ -39,7 +38,6 @@ const InputField = ({
             />
           </div>
         </div>
-      </>
       {error && <ErrorText>{errorText}</ErrorText>}
     </div>
   );

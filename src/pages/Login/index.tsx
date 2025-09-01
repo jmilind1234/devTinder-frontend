@@ -1,19 +1,22 @@
-import Heading4 from "../../atoms/Heading4";
-import TextLink from "../../atoms/Link";
 import LoginForm from "../../organisms/LoginForm";
-import "./_login.scss";
+import { LoginSignupTemplate } from "../../template/LoginSignupTemplate";
 
 function LoginPage() {
   return (
-    <div className="login-page">
-        <Heading4>Sign in</Heading4>
-        <p className="sign-in-text">Sign in to continue to MickeyDevTechnologies.</p>
-        <LoginForm/>
-        <div className="sign-up-text-container">
-          <p className="sign-up-text">Don't have an acount ?</p>
-          <TextLink to="/signup" text="Signup now"/>
-        </div>
-    </div>
+    <LoginSignupTemplate
+      headingText={"Sign in"}
+      headingStatus={true}
+      contentText={"Sign in to continue to MickeyDevTechnologies."}
+      contentStatus={true}
+      form={<LoginForm/>}
+      formStatus={true}
+      bottmText={"Don't have an acount ?"}
+      bottomLinkText={" Signup now"}
+      bottomLinkStatus={true}
+      bottomLink={"/"}
+      bottomSectionStatus={true}
+      bottomLinkTextStatus={true}
+    />
   )
 }
 

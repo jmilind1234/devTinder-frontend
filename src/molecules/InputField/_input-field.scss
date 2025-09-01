@@ -1,59 +1,53 @@
-.field-container{
-    border: 0.8px solid #e6ebf5; 
-    width: calc(100% - 43px);
-    height: 43px;
-    box-sizing: border-box;
-}
-
-.left-icon-holder{
-    width: 47.6px;
-    height: 43px;
-    background-color:#f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &.__error{
-        border-right: 1px solid red;
-    }
-}
-
-.field{
-    width: 100%;
-    border: 0px;
-    height: 100%;
-    font-family: "Public Sans", sans-serif;
-    font-size: 14px;
-    color: #495057;
-    line-height: 21px;
-    padding: 8px;
-    box-sizing: border-box;
-
-    &:focus, &:focus-visible{
-        border: 0;
-        outline: 0;
-    }
-}
-
-
-
-.left-icon-field-container{
-    display: flex;
-    border-radius: 4px;
-    &.__error{
-        border: 1px solid red;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-}
-
 .input-field{
     margin-bottom: 16px;
+    .label-forgotpassword-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .left-icon-field-container{
+        display: flex;
+        border-radius: 4px;
+        .left-icon-holder{
+            width: 47.6px;
+            height: 43px;
+            background-color:#f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .field-container{
+            border: 0.8px solid #e6ebf5; 
+            width: calc(100% - 43px);
+            height: 43px;
+            box-sizing: border-box;
+            .field{
+                width: 100%;
+                border: 0px;
+                height: 100%;
+                font-family: "Public Sans", sans-serif;
+                font-size: 14px;
+                color: #495057;
+                line-height: 21px;
+                padding: 8px;
+                box-sizing: border-box;
+            
+                &:focus, &:focus-visible{
+                    border: 0;
+                    outline: 0;
+                }
+            }
+        }
+        &.__error{
+            border: 1px solid red;
+            border-radius: 4px;
+            overflow: hidden;
+            .left-icon-holder{
+                border-right: 1px solid red;
+            }
+        }
+    }
 }
 
-.label-forgotpassword-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-    width: 100%;
-}

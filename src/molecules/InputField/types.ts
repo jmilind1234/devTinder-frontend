@@ -8,7 +8,7 @@ export interface inputField{
     errorText: string;
     labelText: string;
     placeholder: string;
-    rightIcon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
+    rightIcon?: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
     error: boolean;
     forgotPassword?: boolean;
     changeHandler?: (e: React.ChangeEvent<HTMLInputElement>) => void;
