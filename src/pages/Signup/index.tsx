@@ -11,7 +11,7 @@ const SignupPage = () =>{
         contentStatus={true}
         form={<SignUpForm/>}
         formStatus={true}
-        bottmText={"Already have an account ?"}
+        bottomText={"Already have an account ?"}
         bottomLinkText={" Signin "}
         bottomLinkStatus={true}
         bottomLink={"/"}
