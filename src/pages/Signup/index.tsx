@@ -14,7 +14,7 @@ const SignupPage = () =>{
         bottmText={"Already have an account ?"}
         bottomLinkText={" Signin "}
         bottomLinkStatus={true}
-        bottomLink={"/signup"}
+        bottomLink={"/"}
         bottomSectionStatus={true}
         bottomLinkTextStatus={true}
     />

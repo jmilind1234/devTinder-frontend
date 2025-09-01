@@ -13,7 +13,7 @@ function LoginPage() {
       bottmText={"Don't have an acount ?"}
       bottomLinkText={" Signup now"}
       bottomLinkStatus={true}
-      bottomLink={"/"}
+      bottomLink={"/signup"}
       bottomSectionStatus={true}
       bottomLinkTextStatus={true}
     />
