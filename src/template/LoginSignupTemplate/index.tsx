@@ -1,8 +1,7 @@
-import  Heading4  from '../../atoms/Heading4';
-import { Link } from 'react-router-dom';
+import Heading4 from "../../atoms/Heading4";
 import "./_loginSignupTemplate.scss";
-import './../../atoms/Link/_link.scss';
-
+import TextLink from "../../atoms/Link";
+import type { LoginSignupTemplateProps } from "./types/types";
 
 export const LoginSignupTemplate = ({
   headingText,
@@ -10,25 +9,34 @@ export const LoginSignupTemplate = ({
   contentText,
   contentStatus,
   form,
-  formStatus=false,
-  bottmText,
+  formStatus = false,
+  bottomText,
   bottomLinkText,
-  bottomLinkStatus=false,
-  bottomSectionStatus=false,
-  bottomLinkTextStatus=false,
-  bottomLink}:any) => {
+  bottomLinkStatus = false,
+  bottomSectionStatus = false,
+  bottomLinkTextStatus = false,
+  bottomLink,
+}: LoginSignupTemplateProps) => {
   return (
     <div className="login-page">
-        {headingStatus ? <Heading4>{headingText}</Heading4> :'' } 
-        {contentStatus ? <p className="sign-in-text">{contentText}</p> : ''}
-        {formStatus ? form : ''}
-        {bottomSectionStatus ?
-          <div className="sign-up-text-container">
-            {bottomLinkTextStatus ? <p className="sign-up-text">{bottmText}</p> : ''}
-            {bottomLinkStatus ? <Link to={bottomLink ? bottomLink :''} className="text-link">{bottomLinkText ? bottomLinkText : ''}</Link> : ''} 
-          </div>
-          : ''
-        }
+      {headingStatus ? <Heading4>{headingText}</Heading4> : ""}
+      {contentStatus ? <p className="sign-in-text">{contentText}</p> : ""}
+      {formStatus ? form : ""}
+      {bottomSectionStatus ? (
+        <div className="sign-up-text-container">
+          {bottomLinkTextStatus ? (
+            <p className="sign-up-text">{bottomText}</p>
+          ) : (
+            ""
+          )}
+          {bottomLinkStatus ? (
+            <TextLink
+              to={bottomLink ? bottomLink : ""}
+              text={bottomLinkText ? bottomLinkText : ""}
+            />
+          ) : null}
+        </div>
+      ) : null}
     </div>
-  )
-}
+  );
+};
