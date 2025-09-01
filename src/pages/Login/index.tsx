@@ -10,7 +10,7 @@ function LoginPage() {
       contentStatus={true}
       form={<LoginForm/>}
       formStatus={true}
-      bottmText={"Don't have an acount ?"}
+      bottomText={"Don't have an acount ?"}
       bottomLinkText={" Signup now"}
       bottomLinkStatus={true}
       bottomLink={"/signup"}
