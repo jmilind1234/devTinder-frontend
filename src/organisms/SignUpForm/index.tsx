@@ -161,7 +161,7 @@ const SignUpForm = () => {
           changeHandler={data?.changeHandler}
           blurHandler={data?.blurHandler}
           focusHandler={data?.focusHandler}
-        />
+        /> 
       ))}
 
       <Button btnText="Sign up" clickHandler={() => {}} />
