@@ -3,6 +3,7 @@ import ErrorText from "../../atoms/ErrorText";
 import type { inputField } from "./types";
 import "./_input-field.scss";
 import ForgotPassword from "../../atoms/ForgotPassword";
+import InputIcon from "../../atoms/InputIcon";
 
 const InputField = ({
   classes,
@@ -25,7 +26,7 @@ const InputField = ({
             {forgotPassword && <ForgotPassword text={"Forgot password?"}/>}
         </div>
         <div className={`left-icon-field-container ${error ? "__error" : ""}`}>
-          {leftIcon && <span className={`left-icon-holder`}>{leftIcon}</span>}
+          {leftIcon && <span className={`left-icon-holder`}><InputIcon icon={leftIcon} size={14}/></span>}
           <div className={`field-container`}>
             <input
               className="field"
