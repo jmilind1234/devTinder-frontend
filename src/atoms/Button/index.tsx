@@ -6,10 +6,10 @@ function Button({
   clickHandler,
 }: {
   btnText: string;
-  clickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  clickHandler?: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <button className="button" onClick={clickHandler}>
+    <button className="button" onClick={clickHandler ?? clickHandler}>
       {btnText}
     </button>
   );
