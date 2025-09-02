@@ -50,34 +50,19 @@ const SignUpForm = () => {
           const newState = [...prevState];
           newState[0].value = e.target.value;
           const enteredValue = e.target.value;
-          if (enteredValue.length === 10) {
-            if (/^\d{10}$/.test(enteredValue)) {
-              setIsPhone(true);
-              setIsEmail(false);
-            } else if (validator.isEmail(enteredValue)) {
-              setIsEmail(true);
-              setIsPhone(false);
-            } else {
-              setIsEmail(false);
-              setIsPhone(false);
-            }
-          }else if(enteredValue.length > 10){
-            if (validator.isEmail(enteredValue)){
-              setIsEmail(true);
-              setIsPhone(false);
-            }else{
-              setIsEmail(false);
-              setIsPhone(false);
-            }
-          }else if(enteredValue.length < 10){
+          if (!enteredValue) {
+            setIsEmail(false);
             setIsPhone(false);
-            if (validator.isEmail(enteredValue)){
-              setIsEmail(true);
-            }else{
-              setIsEmail(false);
-            }
-          }
-          else if(enteredValue.length === 0){
+          } else if (validator.isEmail(enteredValue)) {
+            setIsEmail(true);
+            setIsPhone(false);
+          } else if (
+            enteredValue.length === 10 &&
+            /^\d{10}$/.test(enteredValue)
+          ) {
+            setIsPhone(true);
+            setIsEmail(false);
+          } else {
             setIsEmail(false);
             setIsPhone(false);
           }
@@ -191,17 +176,17 @@ const SignUpForm = () => {
 
   useEffect(() => {
     //based on recognized identifier update the signupFieldData
-    setSignupFieldData((prevState)=>{
+    setSignupFieldData((prevState) => {
       const newState = [...prevState];
-      if(isEmail){
+      if (isEmail) {
         newState[0].leftIcon = Mail;
-      }else if(isPhone){
+      } else if (isPhone) {
         newState[0].leftIcon = Phone;
-      }else{
+      } else {
         newState[0].leftIcon = ShieldQuestionMark;
       }
       return newState;
-    })
+    });
   }, [isEmail, isPhone]);
 
   async function handleSignUp(requestBody: any) {
