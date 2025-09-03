@@ -1,15 +1,22 @@
 
+import { useEffect, useState } from "react";
 import SignUpForm from "../../organisms/SignUpForm";
 import { LoginSignupTemplate } from "../../template/LoginSignupTemplate";
+import { useFetchSignUpData } from "../../hooks/useFetchSignUpData";
 
 const SignupPage = () =>{
+
+  const [signUpPageData, setSignUpPageData] = useState<any>({});
+
+  useFetchSignUpData(setSignUpPageData);
+
   return (
     <LoginSignupTemplate
-        headingText={"Register"}
+        headingText={signUpPageData?.pageHeader?.title}
         headingStatus={true}
-        contentText={"Get your MickeyDevTechnologies account now."}
+        contentText={signUpPageData?.pageHeader?.headerContent}
         contentStatus={true}
-        form={<SignUpForm/>}
+        form={<SignUpForm content={signUpPageData?.signUpForm?.formContent}/>}
         formStatus={true}
         bottomText={"Already have an account ?"}
         bottomLinkText={" Signin "}
