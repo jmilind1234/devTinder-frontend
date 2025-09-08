@@ -25,7 +25,7 @@ function LoginForm() {
         labelText="Username / Phone"
         errorText={identifierErrorText}
         value={identifier}
-        leftIcon={<User size={14} />}
+        leftIcon={User}
         error={identifierError}
         placeholder={"Enter username / phone number"}
         changeHandler={(e) => {
@@ -48,7 +48,7 @@ function LoginForm() {
         labelText="Password"
         errorText={passwordErrorText}
         value={password}
-        leftIcon={<LockKeyhole size={14} />}
+        leftIcon={LockKeyhole}
         error={passwordError}
         placeholder={"Enter password"}
         changeHandler={(e) => {

@@ -1,0 +1,75 @@
+{
+  "pageHeader": {
+    "title": "Register",
+    "headerContent": "Get your MickeyDevTechnologies account now."
+  },
+  "formContent": {
+    "fields": [
+      {
+        "placeHolder": "Enter email-id / phone number",
+        "type": "text",
+        "id": "identifier",
+        "labelText": "Email / Phone Number",
+        "leftIconNames": {
+          "default": "ShieldQuestionMark",
+          "mail": "Mail",
+          "phone": "Phone"
+        },
+        "errorMessages": {
+          "empty": "Email-id / Phone number is required",
+          "invalid": "Email-id / Phone number is invalid"
+        }
+      },
+      {
+        "placeHolder": "Enter username",
+        "id": "username",
+        "type": "text",
+        "labelText": "Username",
+        "leftIconNames": {
+          "default": "User"
+        },
+        "errorMessages": {
+          "empty": "Username is required",
+          "short": "Username should be at least 5 characters long",
+          "long": "Username should not exceed 15 characters"
+        }
+      },
+      {
+        "placeHolder": "Enter password",
+        "id": "password",
+        "type": "password",
+        "labelText": "Password",
+        "leftIconNames": {
+          "default": "LockKeyhole"
+        },
+        "errorMessages": {
+          "empty": "Password is required",
+          "weak": "Password is too weak",
+          "different": "Passwords do not match"
+        }
+      },
+      {
+        "placeHolder": "Enter confirm password",
+        "id": "confirm-password",
+        "type": "password",
+        "labelText": "Confirm Password",
+        "leftIconNames": {
+          "default": "LockKeyhole"
+        },
+        "errorMessages": {
+          "empty": "Confirm Password is required",
+          "weak": "Confirm password is too weak",
+          "different": "Passwords do not match"
+        }
+      },
+      {
+        "buttonText": "Sign up",
+        "id": "sign-up-button",
+      }
+    ]
+  },
+  "pageFooter": {
+    "footerContent": "Already have an account?",
+    "linkText": "Signin"
+  }
+}

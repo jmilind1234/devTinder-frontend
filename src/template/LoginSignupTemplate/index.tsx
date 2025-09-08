@@ -2,6 +2,7 @@ import Heading4 from "../../atoms/Heading4";
 import "./_loginSignupTemplate.scss";
 import TextLink from "../../atoms/Link";
 import type { LoginSignupTemplateProps } from "./types/types";
+import Logo from "../../atoms/Logo";
 
 export const LoginSignupTemplate = ({
   headingText,
@@ -19,6 +20,7 @@ export const LoginSignupTemplate = ({
 }: LoginSignupTemplateProps) => {
   return (
     <div className="login-page">
+      <Logo/>
       {headingStatus ? <Heading4>{headingText}</Heading4> : ""}
       {contentStatus ? <p className="sign-in-text">{contentText}</p> : ""}
       {formStatus ? form : ""}
