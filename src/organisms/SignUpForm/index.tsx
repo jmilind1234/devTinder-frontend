@@ -10,12 +10,12 @@ import BoxContainer from "../../atoms/BoxContainer";
 import InputField from "../../molecules/InputField";
 import Button from "../../atoms/Button";
 import "../LoginForm/_login-form.scss";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { FieldDataProps } from "../types/types";
 import validator from "validator";
 
-const SignUpForm = () => {
-  const [isEmail, setIsEmail] = useState(false);
+const SignUpForm = ({content} :{content: any}) => {
+  const [isEmail, setIsEmail] = useState(true);
   const [isPhone, setIsPhone] = useState(false);
 
   const [signupFieldData, setSignupFieldData] = useState([
@@ -174,6 +174,7 @@ const SignUpForm = () => {
     },
   ]);
 
+  //use effect to change the left icon of identifier field
   useEffect(() => {
     //based on recognized identifier update the signupFieldData
     setSignupFieldData((prevState) => {
